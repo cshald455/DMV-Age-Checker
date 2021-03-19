@@ -1,0 +1,35 @@
+<html>
+<head>
+  <script>
+  function ageCheck()
+  {
+     document.getElementById("message").innerHTML = '';
+     var year = document.getElementById("byear").value;
+     year = parseInt(year);
+     var age = 2021 - year;
+     if (age > 200)
+     {
+           document.getElementById('message').innerHTML = "Error. you are dead";
+     }
+     else if(age > 15)
+     {
+           document.getElementById('message').innerHTML = "Congratualtions! You are old enough to drive!";
+     }
+     else if(age < 16)
+     {
+           document.getElementById('message').innerHTML = "You are too young to drive.";
+     }
+     else if (age < 0)
+     {
+           document.getElementById('message').innerHTML = "Error. You haven't been born yet";
+     }
+   }
+</script>
+  <body>
+  <h1> Age Checker </h1>
+  <p> Type in your birth year to find out if you are old enough to drive </p>
+  <input type = "text" placeholder = "Type birth year" id = "byear">
+  <input type = "button" value = "Submit" onclick = "ageCheck()" = "sButton">
+  <p id = "message"></p>
+  </body>
+  </html>
